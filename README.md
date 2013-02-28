@@ -42,7 +42,7 @@ librarian-chef install
 and after that you may use these new cookbooks in your Vagrantfile.
 
 ### Booting up
-This package uses Ubuntu box (you should be able to use Debian box with no changes to build recipes).
+This package uses Centos box (the original skeleton used Ubunto but I prefer CentOS).
 To download Centos box, type:
 ```sh
 vagrant box add centos https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box
