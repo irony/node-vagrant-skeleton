@@ -8,7 +8,7 @@ node-vagrant-skeleton
 
 ## Introduction
 
-This is my application skeleton that I use to develop Node.js powered applications. It runs on Vagrant powered Ubuntu Virtual Machine.
+This is a fork of another vagrant-skeleton (thanks @pchalasis for the start box!) that I plan to use to develop Node.js powered applications. It runs on Vagrant powered  CentOS Virtual Machine.
 
 ## Components
 
@@ -33,11 +33,19 @@ Node.js will be compiled from source (http://nodejs.org/dist/node-latest.tar.gz)
 This virtual machine is managed through Vagrant. You can download Vagrant from http://vagrantup.com/.
 You should consider reading http://vagrantup.com/v1/docs/getting-started/index.html as well.
 
+### Librarian
+To make it easier to install new cookbooks I use Librarian to add new cookbooks. Just edit the file
+`/build/Cheffile with new cookbooks and then run
+```sh
+librarian-chef install
+```
+and after that you may use these new cookbooks in your Vagrantfile.
+
 ### Booting up
 This package uses Ubuntu box (you should be able to use Debian box with no changes to build recipes).
-To download Ubuntu 12.04 box, type:
+To download Centos box, type:
 ```sh
-vagrant box add Ubuntu-12.04 https://dl.dropbox.com/u/1543052/Boxes/UbuntuServer12.04amd64.box
+vagrant box add centos https://dl.dropbox.com/u/7225008/Vagrant/CentOS-6.3-x86_64-minimal.box
 ```
 When the download is completed, type:
 ```sh
